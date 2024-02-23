@@ -1,0 +1,29 @@
+
+.textHoverEffect::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
+.textHoverEffect:hover:before {
+  width: 100%;
+}
+
+.submenu {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 200ms ease;
+  pointer-events: none;
+}
+
+
+.link-hover:hover  .submenu  {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
