@@ -65,18 +65,18 @@ export const  textSlideIn = {
 
 export const slideDownNav = {
     initial : {
-        // y : "-100%"
-        opacity : 0
+        y : "-50",
+        // opacity : 0
     },
     animate : {
-        opacity : 1,
+        y : 0,
         transition: {
             duration : 1,
             delay : 0.5,
         }
     },
     exit : {
-        opacity  : 0,
+        opacity  : -50,
         transition: {
             duration : 1,
             delay : 0.5,

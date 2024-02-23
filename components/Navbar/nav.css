@@ -1,4 +1,3 @@
-
 .textHoverEffect::before {
   content: "";
   position: absolute;
@@ -6,7 +5,7 @@
   bottom: 0;
   width: 0%;
   height: 1px;
-  background-color: black;
+  background-color: currentColor;
   transition: all 0.3s ease;
 }
 
@@ -17,13 +16,20 @@
 .submenu {
   visibility: hidden;
   opacity: 0;
-  transition: all 200ms ease;
+  transition: all 100ms ease;
   pointer-events: none;
 }
 
-
-.link-hover:hover  .submenu  {
+.link-hover:hover .submenu {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+}
+
+.submenu-item > .img-div {
+  transform: translateY(-50);
+  transition: all 0.5s ease;
+}
+.link-hover:hover .submenu .submenu-item > img {
+  transform: translateY(0);
 }
