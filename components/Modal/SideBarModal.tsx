@@ -19,7 +19,7 @@ const SideBarModal = ({ children }: { children: React.ReactNode }) => {
       initial="initial"
       animate="animate"
       exit="exit"
-      className="navbar-style-for-small-screen lg:hidden w-full h-full fixed top-0 right-0 bg-[#F5F5F5]  "
+      className="navbar-style-for-small-screen z-[50] lg:hidden w-full h-full fixed top-0 right-0 bg-[#F5F5F5]  "
     >
       <div className="absolute  top-10 right-10 cursor-pointer">
         <CrossIcon onClick={modalState} className="rotate-45 dark:fill-black

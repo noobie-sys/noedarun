@@ -20,7 +20,7 @@
   pointer-events: none;
 }
 
-.link-hover:hover .submenu {
+.link-hover:hover .submenu  {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;

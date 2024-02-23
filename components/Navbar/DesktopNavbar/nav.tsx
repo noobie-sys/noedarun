@@ -19,13 +19,14 @@ const Nav = ({ gender, data }: Props) => {
 
   // console.log(data);
   return (
-    <div className="submenu-item hidden lg:flex  justify-around px-5 h-full w-full items-center transition-all ">
+    <div className="relative z-50 submenu-item hidden lg:flex  justify-around px-5 h-full w-full items-center transition-all mt-10 ">
+     {/* <div className='absolute overlay  left-0 w-screen top-0 opacity-90 z-5 h-screen bg-[#f1f1f1] dark:bg-black' /> */}
       {data &&
         data.map((el, i) => (
           <Link
             href={`/collections/${el.categoryName}/${gender}`}
             key={i}
-            className="box-1 w-[30vw] h-[30vh] xl:h-[40vh] xl:w-[40vh] "
+            className="box-1 w-[30vw] relative z-10 h-[30vh] xl:h-[40vh] xl:w-[40vh] "
           >
             <motion.div
               initial="initial"

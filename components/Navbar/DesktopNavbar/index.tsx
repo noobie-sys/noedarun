@@ -32,7 +32,8 @@ const NavbarDestop =  () => {
     // const  data : NavbarCategory[] = await getProductImage()
     // console.log(data)
   return (
-    <div className=" relative flex justify-center gap-10 text-lg items-center">
+    <div className=" relative z-50  flex justify-center gap-10 text-lg items-center">
+      
         <div className="flex  w-full">
           <div className="relative px-7 link-hover w-full   ">
             <Link

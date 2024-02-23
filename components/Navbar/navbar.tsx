@@ -24,9 +24,9 @@ export const Navbar = () => {
     }));
   };
   return (
-    <nav className="w-full px-10 flex items-center justify-between relative">
-      <div className="logo   flex justify-center items-center">
-        <Link href={"/"} className="relative lg:z-10 ">
+    <nav className="w-full  px-5 lg:px-16 lg:py-6 flex items-center justify-between relative ">
+      <div className="logo   flex justify-center items-center ">
+        <Link href={"/"} className="relative lg:z-[52] ">
           <svg
             viewBox="0 0 99 40"
             fill="none"
@@ -40,9 +40,10 @@ export const Navbar = () => {
       </div>   
 
       <div className="hidden lg:flex">
+        {/* <div className="w-full h-screen opacity-50 bg-black"></div> */}
         <NavbarDestop />
       </div>
-      <div className="right-side relative  flex gap-5 items-center ">
+      <div className="right-side relative z-[52]  flex gap-5 items-center ">
         <ThemeSwitch />
         <div className="flex gap-2">
           <div className="cart-icon">
