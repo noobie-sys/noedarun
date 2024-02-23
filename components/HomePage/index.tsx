@@ -36,7 +36,7 @@ const HomePage = ({data} : any) => {
       <div className="bannerImage w-screen lg:h-screen  relative  mt-14 lg:mt-32 xl:mt-40 overflow-hidden">
         <motion.div  className="w-full overflow-hidden">
           <Image
-            src={urlFor(data.image1).url()}
+            src={urlFor(data[0].image1).url()}
             alt="Image"
             width={500}
             height={400}
