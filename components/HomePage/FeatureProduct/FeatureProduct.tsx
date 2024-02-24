@@ -10,7 +10,7 @@ import { ArrowRight } from "lucide-react";
 
 const FeatureProduct = ({ data }: any) => {
   return (
-    <div className="w-full relative px-3">
+    <div className="w-full h-full relative px-3">
       <div className="w-full h-full relative">
         <div className="text-div pt-6 tracking-tighter leading-[46px] lg:leading-none font-[400]">
           <h1 className="w-full text-[40px] lg:pl-10 lg:text-[5vw] ">

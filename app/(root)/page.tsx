@@ -3,6 +3,7 @@ import { client, urlFor } from "../lib/sanity";
 import HomePage from "@/components/HomePage";
 import FeatureProduct from "@/components/HomePage/FeatureProduct/FeatureProduct";
 import Stories from "@/components/Stories/Stories";
+import AdditionalDetails from "@/components/AddditonalDetails";
 
 const getBannerImage = async () => {
   const query = `*[_type == "banner"]`;
@@ -25,10 +26,11 @@ export default async function Home() {
   // console.log(data)
   // console.log(data)
   return (
-    <section className="flex flex-col h-[200vh]  gap-4 w-full">
+    <section className="flex flex-col min-h-screen  gap-4 w-full">
      <HomePage data={data.response} />
      <FeatureProduct data={data.response2} />
      <Stories data={data.response}  />
+     <AdditionalDetails />
     </section>
   );
 }

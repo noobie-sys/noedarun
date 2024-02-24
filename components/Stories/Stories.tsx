@@ -10,7 +10,7 @@ const Stories = ({ data }: any) => {
       " "
     );
   return (
-    <div className="w-full relative h-screen mt-32 ">
+    <div className="w-full relative h-full mt-32 ">
       <div className="image">
         <div>
           <div>
@@ -43,6 +43,7 @@ const Stories = ({ data }: any) => {
             </div>
         </div>
       </div>
+      
     </div>
   );
 };
