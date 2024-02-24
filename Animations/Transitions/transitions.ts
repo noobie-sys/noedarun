@@ -83,3 +83,21 @@ export const slideDownNav = {
         }
     }
 }
+
+
+export const slideUpOpacity = {
+    initial : {
+        opacity : 0,
+        y : 50
+    },
+    animate : (num : number) =>  ({
+        opacity : 1,
+        y : 0,
+        transition: {
+            duration : 0.5,
+            delay : 0.08 * num,
+            ease: [0.76, 0, 0.24, 1]
+        }
+    }),
+    
+}

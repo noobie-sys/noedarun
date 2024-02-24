@@ -9,3 +9,12 @@ export interface NavbarCategory {
   navImage : string;
   categoryName : string;
 }
+
+export interface Products {
+  image : string,
+  name : string,
+  price : number,
+  model : string,
+  slug : string
+  index ?: number
+}

@@ -1121,6 +1121,11 @@
   resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-1.54.2.tgz#0665848e22cbda936cfd05256facdfbba121438d"
   integrity sha512-R1PwtDvUfs99cAjfuQ/WpwJ3c92+DAMy9xGApjqlWQMj0FKQabUAys2swfTRNzuYAYJh7NqK2dzcYVNkKLEKUg==
 
+"@studio-freight/lenis@^1.0.37":
+  version "1.0.37"
+  resolved "https://registry.yarnpkg.com/@studio-freight/lenis/-/lenis-1.0.37.tgz#ee0632acaf89118092a49f5894ffa676d88a603b"
+  integrity sha512-LKfodiKvdcwN/gRifvgZuI1oL6LjGeHDIL5+rnr2OFqSFsm+hLixeeOiDii48T+iyWUxz/Uuj8/6w/pesc8QmA==
+
 "@swc/helpers@0.5.2":
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.5.2.tgz#85ea0c76450b61ad7d10a37050289eded783c27d"

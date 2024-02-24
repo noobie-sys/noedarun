@@ -69,14 +69,14 @@ const FeatureProduct = ({ data }: any) => {
                         <div className="w-full lg:px-12 px-4 absolute bottom-0 left-0 text-black lg:py-10 py-5 flex justify-between ">
                           <div className="text-3xl">
                             <div>
-                              <h1>001</h1>
+                              <h1>{data[i].model}</h1>
                             </div>
                             <div>
-                              <h1>Magma</h1>
+                              <h1>{data[i].name}</h1>
                             </div>
                           </div>
                           <div className="text-3xl text-end flex justify-end items-end ">
-                            <h1>$295 USD</h1>
+                            <h1>${data[i].price} USD</h1>
                           </div>
                         </div>
                       </SwiperSlide>
@@ -88,7 +88,7 @@ const FeatureProduct = ({ data }: any) => {
         </div>
         <div className="links flex justify-end absolute z-[50] lg:top-16 lg:right-0 lg:w-full lg:h-fit -bottom-12 left-0  gap-10 lg:px-12 text-[20px]  ">
           <Link
-            href={"/products/men"}
+            href={"/collections/all-products/men"}
             className="flex justify-center items-center relative  h-fit"
           >
             <div className="textHoverEffect flex justify-center items-center gap-10">
@@ -97,7 +97,7 @@ const FeatureProduct = ({ data }: any) => {
             </div>
           </Link>
           <Link
-            href={"/products/women"}
+            href={"/collections/all-products/women"}
             className="flex justify-center items-center h-fit relative "
           >
             <div className="textHoverEffect flex justify-center items-center gap-10">

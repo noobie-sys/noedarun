@@ -49,7 +49,7 @@ const NavbarDestop =  () => {
           </div>
           <div className="relative px-7  link-hover ">
             <Link
-              href="/collections/all-product/women"
+              href="/collections/all-products/women"
               className="textHoverEffect relative z-10 "
               data-text="Women"
             >

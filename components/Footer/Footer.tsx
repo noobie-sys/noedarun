@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export const Footer = () => {
   return (
-    <div className="w-full relative lg:h-screen h-[120vh] bg-[#000000] text-white ">
+    <div className="w-full relative lg:h-screen h-[120vh] bg-[#000000] dark:border-t text-white ">
       <div>
         <div className="absolute lg:top-16  top-10 left-10 lg:left-16 uppercase">
           <span className="font-bold text-[12px]">Join our community</span>
