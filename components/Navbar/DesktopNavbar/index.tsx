@@ -9,19 +9,19 @@ import Nav from './nav';
 const data = [
     {
         categoryName : "Shoes",
-        navImage : "/assets/banner/shoes.webp"
+        navImage : "/assets/banner/shoes.webp",
     },
     {
         categoryName : "Accessories",
-        navImage : "/assets/banner/acc.webp"
+        navImage : "/assets/banner/acc.webp",
     },
     {
         categoryName : "Apparel",
-        navImage : "/assets/banner/apparel.webp"
+        navImage : "/assets/banner/apparel.webp",
     },
     {
         categoryName : "View All",
-        navImage : "/assets/banner/other.webp"
+        navImage : "/assets/banner/other.webp",
     }
 ]
 

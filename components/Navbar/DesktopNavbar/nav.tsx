@@ -24,7 +24,7 @@ const Nav = ({ gender, data }: Props) => {
       {data &&
         data.map((el, i) => (
           <Link
-            href={`/collections/all-products/${gender}`}
+            href={el.categoryName == "View All" ? `/collections/all-products/${gender}` : `/collections/${el.categoryName.toLowerCase()}/${gender}`}
             key={i}
             className="box-1 w-[30vw] relative z-10 h-[30vh] xl:h-[40vh] xl:w-[40vh] "
           >
