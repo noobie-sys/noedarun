@@ -3,22 +3,23 @@ import { FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import Image from "next/image";
 
 export const Footer = () => {
   return (
-    <div className="w-full relative h-screen bg-[#000000] text-white ">
+    <div className="w-full relative lg:h-screen h-[120vh] bg-[#000000] text-white ">
       <div>
-        <div className="absolute top-16 left-16 uppercase">
+        <div className="absolute lg:top-16  top-10 left-10 lg:left-16 uppercase">
           <span className="font-bold text-[12px]">Join our community</span>
         </div>
-        <div className="w-[75%] pl-10  ">
+        <div className="lg:w-[75%] w-full pl-10  ">
           <h1 className="text-[8vw] leading-none tracking-tight pt-16  flex flex-col uppercase font-semibold">
-            <span className="text-right">What do </span>
+            <span className="text-right pr-12 lg:pr-0">What do </span>
             <span>you run for?</span>
           </h1>
         </div>
-        <div className="w-[75%] h-[40vh]  py-5 flex justify-around   mt-28">
-          <div className="w-[60%] h-full justify-between flex border-t py-12 px-4   ">
+        <div className="lg:w-[75%] w-full h-[40vh]  py-5 flex flex-col justify-around lg:flex-row  mt-28">
+          <div className="w-full lg:w-[60%] mt-10 lg:mt-0 h-full justify-between flex border-t py-12 px-4   ">
             <div className=" flex flex-col ">
               <span className="text-xl font-semibold pb-5">
                 Sign up for norda™ news
@@ -57,24 +58,29 @@ export const Footer = () => {
               </form>
             </div>
           </div>
-          <div className="border-t py-12 flex flex-col gap-4 font-bold">
-            <div className="relative">
+          <div className="border-t py-12 flex flex-col gap-4 font-bold pl-10 lg:px-0 ">
+            <div className="relative w-fit">
                 <h1 className="textHoverEffect cursor-pointer">Questions and Answer</h1>
             </div>
-            <div className="relative">
+            <div className="relative w-fit">
                 <h1 className="textHoverEffect cursor-pointer">Where to buy</h1>
             </div>
-            <div className="relative">
+            <div className="relative w-fit">
                 <h1 className="textHoverEffect cursor-pointer">Performance and Sustainibilty</h1>
             </div>
-            <div className="relative">
+            <div className="relative w-fit">
                 <h1 className="textHoverEffect cursor-pointer">Contact Me</h1>
             </div>
           </div>
         </div>
-        <div className="absolute top-0 right-0">
-            <div></div>
-            <div></div>
+        <div className="absolute bottom-0 lg:top-28 right-2 flex lg:flex-col gap-4 pr-5">
+            <div>
+                <Image src={'/assets/banner/NORDA.webp'} alt="Norda Shoes" width={250} height={400} className="object-cover object-center aspect-square" />
+            </div>
+            <div>
+                <Image src={'/assets/banner/NORDA_.webp'} alt="Norda Shoes" width={250} height={400} className="object-cover object-center aspect-square" />
+            </div>
+            {/* <div></div> */}
         </div>
       </div>
     </div>
