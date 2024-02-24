@@ -52,7 +52,7 @@ const FeatureProduct = ({ data }: any) => {
                     return (
                       <SwiperSlide
                         key={i}
-                        className=" overflow-hidden  lg:w-[50vw] w-full h-full "
+                        className=" overflow-hidden  lg:w-[50vw] w-full h-full bg-[#F4F4F4]"
                       >
                         <Link
                           href={`/products/${data[i].slug}`}
