@@ -6,6 +6,7 @@ import { RecoilRoot } from "recoil";
 import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import AdditionalDetails from "@/components/AddditonalDetails";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
@@ -28,6 +29,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <Navbar />
 
       {children}
+      <AdditionalDetails />
       <Footer />
     </RecoilRoot>
   );

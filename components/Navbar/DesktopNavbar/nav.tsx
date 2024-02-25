@@ -9,18 +9,26 @@ import "../nav.css";
 import { client, urlFor } from "@/app/lib/sanity";
 import { NavbarCategory } from "@/types";
 import axios from "axios";
+import { useParams, usePathname } from "next/navigation";
 
 interface Props {
   gender: string;
   data: Array<NavbarCategory>;
 }
 const Nav = ({ gender, data }: Props) => {
+  const pathname = usePathname();
+  const params = useParams()
+  // console.log(pathname , params)
   // const data: NavbarCategory[] = await getProductImage();
 
   // console.log(data);
+  // const pathname = usePathname()
   return (
-    <div className="relative z-50 submenu-item hidden lg:flex  justify-around px-5 h-full w-full items-center transition-all pt-10 ">
+    <div className={`relative z-50 submenu-item hidden lg:flex justify-around px-5 h-full w-full items-center transition-all pt-10 ${pathname === '/products/'+params.slug ? "bg-black text-white" : ""} `}>
      {/* <div className='absolute overlay  left-0 w-screen top-0 opacity-90 z-5 h-screen bg-[#f1f1f1] dark:bg-black' /> */}
+     <div className={`submenu-item hidden lg:flex  justify-around px-5 h-full w-full items-center transition-all pt-10 ${pathname === '/products/'+params.slug ? "bg-black text-white" : ""}`}>
+
+     
       {data &&
         data.map((el, i) => (
           <Link
@@ -45,7 +53,7 @@ const Nav = ({ gender, data }: Props) => {
               </motion.div>
             </motion.div>
             <div className="w-full h-fit  flex justify-between px-2 py-2 ">
-              <div className="font-bold flex justify-center items-center tracking-tighter text-black dark:text-white">
+              <div className={`font-bold flex justify-center items-center tracking-tighter text-black dark:text-white ${pathname === '/products/'+params.slug ? " text-white" : ""}`}>
                 <h1>{el.categoryName}</h1>
               </div>
               <div className="w-10 h-10 flex justify-center items-center rounded-full bg-[#363636] text-white ">
@@ -54,6 +62,7 @@ const Nav = ({ gender, data }: Props) => {
             </div>
           </Link>
         ))}
+        </div>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { client } from '@/app/lib/sanity'
+import { client, urlFor } from '@/app/lib/sanity'
 import HeroPageSingleProduct from '@/components/singleProductPage/heroSection'
 import { AllProducts } from '@/types'
 import React from 'react'
@@ -31,9 +31,23 @@ const getAllProducts = async (slug : string) => {
 const SingleProduct = async  ({params}: Props) => {
     const data : AllProducts[]  = await getAllProducts(params.slug)
     // console.log(data)
+    
   return (
     <div className='min-h-screen w-full flex flex-col'>
-        <HeroPageSingleProduct />
+     
+     {
+      data.length === 0 ? (
+        <div className='w-full h-[80vh] flex justify-center items-center text-5xl underline'>
+            <h1 className='w-[50%] text-center'>I'm sorry, It's seems like we don't have what you need!</h1>
+        </div>
+      ) : data.map((el , i) => {
+        console.log(el)
+        return ( 
+          
+          <HeroPageSingleProduct key={el._id} bannerImage={urlFor(el.bannerImage).url()} name={el.name} model={el.model} price={el.price} />
+        )
+      })
+     }
     </div>
   )
 }

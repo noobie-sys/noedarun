@@ -30,7 +30,7 @@ export default async function Home() {
      <HomePage data={data.response} />
      <FeatureProduct data={data.response2} />
      <Stories data={data.response}  />
-     <AdditionalDetails />
+     
     </section>
   );
 }
