@@ -18,3 +18,18 @@ export interface Products {
   slug : string
   index ?: number
 }
+
+
+export interface AllProducts {
+  name : string,
+  price : number,
+  model : string,
+  slug : string,
+  bannerImage : string,
+  description : string,
+  _id : string,
+  galleryImages : string[],
+  images : string[],
+  category : string,
+  gender : string
+}

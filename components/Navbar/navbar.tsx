@@ -2,7 +2,6 @@
 'use client'
 import { ThemeSwitch } from "@/components/theme-switch";
 import Link from "next/link";
-import { useState } from "react";
 import MobileNav from "./Nav/Nav";
 import { ArrowRight, Menu } from "lucide-react";
 import { AnimatePresence } from "framer-motion";

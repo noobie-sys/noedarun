@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import { motion } from 'framer-motion'
 import Nav from './nav';
+import './navbar.css'
 
 
 
@@ -33,8 +34,8 @@ const NavbarDestop =  () => {
     // console.log(data)
   return (
     <div className=" relative z-50  flex justify-center gap-10 text-lg items-center">
-      
-        <div className="flex  w-full">
+        <div className="flex  w-full parnt-div">
+      {/* <div className='fixed overlay opacity-0  left-0 w-screen top-0  z-5 h-screen bg-[#f1f1f1]' /> */}
           <div className="relative px-7 link-hover w-full   ">
             <Link
               href="/collections/all-products/men"
