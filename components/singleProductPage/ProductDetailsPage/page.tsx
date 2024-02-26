@@ -5,19 +5,19 @@ import Image from "next/image";
 import { urlFor } from "@/app/lib/sanity";
 
 interface Props {
-  images: any;
+  images: Array<string>;
   descriptions: string;
 }
 const ProductDetails = ({ images, descriptions }: Props) => {
   const desc1 = descriptions.slice(0, 448);
   const desc2 = descriptions.slice(448);
-  console.log("------------", images, "hello there");
+//   console.log("------------", images, "hello there");
   return (
     <div className="w-full h-screen ">
       <div className="w-full h-full flex flex-col lg:flex-row justify-between  px-5">
         <div className="Imagegallery lg:w-1/2 h-fit flex flex-wrap gap-1">
           { 
-            images.map((el : any, i : number) => (
+            images.map((el, i ) => (
               <div
                 key={i}
                 className="w-[22vw] h-[32vh] bg-[#F4F4F4] overflow-hidden cursor-pointer"

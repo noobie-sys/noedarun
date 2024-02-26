@@ -1,5 +1,7 @@
 import { client, urlFor } from "@/app/lib/sanity";
+import FeatureProduct from "@/components/HomePage/FeatureProduct/FeatureProduct";
 import ProductDetails from "@/components/singleProductPage/ProductDetailsPage/page";
+import SliderGallery from "@/components/singleProductPage/gallerySlider";
 import HeroPageSingleProduct from "@/components/singleProductPage/heroSection";
 import { AllProducts } from "@/types";
 import React from "react";
@@ -19,7 +21,7 @@ const getAllProducts = async (slug: string) => {
           "category":category->category,
           name,
          images,
-          "galleryImage" : galleryImages,
+          "galleryImages" : galleryImages,
           description,
           price,
           "bannerImage" : banner
@@ -58,6 +60,8 @@ const SingleProduct = async ({ params }: Props) => {
                 images={el.images}
                 descriptions={el.description}
               />
+              <SliderGallery  imageGallery={el.galleryImages}/>
+              {/* <FeatureProduct /> */}
             </div>
           );
         })
