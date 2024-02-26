@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { textSlideIn } from "@/Animations/Transitions/transitions";
 import { motion } from "framer-motion";
 import SideBarModal from "@/components/Modal/SideBarModal";
-import { NavigationMenuDemo } from "../mobileNav/slideInAcc";
 
 const navLinks = ["Men", "Women", "Stories"];
 const navItems = [ "Shoes" , "Apparal" , "Accessories" , "Other"];

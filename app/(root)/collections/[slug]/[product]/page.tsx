@@ -24,7 +24,7 @@ const Product = async ({params} : {params : {slug : string , product : string}})
     const genderSlug = params.product[0].toUpperCase() + params.product.slice(1)
 
     const data : Products[] = await getProductDetail(params.slug , genderSlug)
-    console.log(data)
+    // console.log(data)
   return (
     <div className='w-full lg:min-h-screen gap-2 flex flex-col '>
         <div className="mb-10 pl-20 overflow-hidden">

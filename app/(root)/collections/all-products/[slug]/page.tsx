@@ -18,7 +18,7 @@ const getProducts = async (slug : string) => {
 }
 const SingleProducts = async ({params} : {params : {slug : string}}) => {
   const slug = params.slug[0].toUpperCase() + params.slug.slice(1)
-  console.log(slug , "Hello There")
+  // console.log(slug , "Hello There")
   const data : Products[] = await getProducts(slug );
   // console.log(params.slug)
   return (
