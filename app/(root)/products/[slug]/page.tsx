@@ -24,7 +24,8 @@ const getAllProducts = async (slug: string) => {
           "galleryImages" : galleryImages,
           description,
           price,
-          "bannerImage" : banner
+          "bannerImage" : banner,
+          "price_id": price_id
           
       }`;
   const response = await client.fetch(query);
@@ -50,10 +51,6 @@ const SingleProduct = async ({ params }: Props) => {
             <div className="w-full " key={el._id}>
               <HeroPageSingleProduct
                 key={el._id}
-                // bannerImage={urlFor(el.bannerImage).url()}
-                // name={el.name}
-                // model={el.model}
-                // price={el.price}
                 {...el}
               />
 

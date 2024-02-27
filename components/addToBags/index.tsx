@@ -10,20 +10,20 @@ interface Props {
   description: string;
   image: string;
   id: string;
-  price_id?: string;
+  price_id: string;
 }
 
 const AddToCart = ({ ...Props }: Props) => {
   const { addItem, handleCartClick } = useShoppingCart();
-  const { description, id, image, model, name, price } = Props;
+  const { description, id, image, model, name, price, price_id } = Props;
+  // console.log(price_id , "Hello I am developer")
   const product = {
     name,
     price,
     model,
     description,
-    id,
     image,
-    price_id: "3242345",
+    id: price_id,
     // sku: "54456456",/
     currency: "usd",
   };
@@ -32,7 +32,7 @@ const AddToCart = ({ ...Props }: Props) => {
       <Button
         onClick={() => {
           addItem(product);
-          handleCartClick()
+          handleCartClick();
         }}
         className="w-full text-black bg-white hover:bg-[#222222] hover:text-white uppercase font-bold"
         variant={"secondary"}

@@ -33,9 +33,9 @@ export function ShoppingCartModal() {
       if (result?.error) {
         console.log("results");
       }
-      clearCart();
+    //   clearCart();
     } catch (error) {
-      console.log({ message: error });
+      console.log(error);
     }
   };
   return (
@@ -121,9 +121,7 @@ export function ShoppingCartModal() {
                 <Button
                   onClick={handleCheckoutCart}
                   disabled={cartCount === 0}
-                  className={`w-full ${
-                    cartCount === 0 && "cursor-not-allowed"
-                  }`}
+                  className={`w-full `}
                 >
                   Checkout
                 </Button>

@@ -31,5 +31,6 @@ export interface AllProducts {
   galleryImages : string[],
   images : string[],
   category : string,
-  gender : string
+  gender : string,
+  price_id : string
 }

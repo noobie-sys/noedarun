@@ -5,14 +5,14 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
   return (
     <USCProvider
       mode="payment"
-      currency="usd"
+      currency="USD"
       cartMode="client-only"
-      stripe={"process.env.NEXT_PUBLIC_STRIPE_KEY"}
+      stripe={process.env.NEXT_PUBLIC_STRIPE_KEY as string}
       successUrl="http://localhost:3000/stripe/success"
-      cancelUrl="http://localhost:3000/stripe/cancel"
+      cancelUrl="http://localhost:3000/stripe/error"
       billingAddressCollection={false}
       shouldPersist={true}
-      language="en"
+      language="en-US"
     >
       {children}
     </USCProvider>
