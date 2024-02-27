@@ -7,17 +7,34 @@ import Image from "next/image";
 import { urlFor } from "@/app/lib/sanity";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { textAnimation } from "@/Animations/textAnimation";
+import { imageAnimation } from "@/Animations/imageAnimation";
 
 const FeatureProduct = ({ data }: any) => {
   return (
     <div className="w-full h-full relative px-3">
       <div className="w-full h-full relative">
         <div className="text-div pt-6 tracking-tighter leading-[46px] lg:leading-none font-[400]">
-          <h1 className="w-full text-[40px] lg:pl-10 lg:text-[5vw] ">
+          <motion.h1
+            variants={textAnimation}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            custom={1}
+            className="w-full text-[40px] lg:pl-10 lg:text-[5vw] "
+          >
             Featured
-          </h1>
+          </motion.h1>
         </div>
-        <div className="card mt-10">
+        <motion.div
+          variants={imageAnimation}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          custom={1.1}
+          className="card mt-10"
+        >
           <div className="image w-full  ">
             <div className="image-slider flex lg:px-12 px-0">
               <Swiper
@@ -85,25 +102,25 @@ const FeatureProduct = ({ data }: any) => {
               </Swiper>
             </div>
           </div>
-        </div>
+        </motion.div>
         <div className="links flex justify-end absolute z-[50] lg:top-16 lg:right-0 lg:w-full lg:h-fit -bottom-12 left-0  gap-10 lg:px-12 text-[20px]  ">
           <Link
             href={"/collections/all-products/men"}
-            className="flex justify-center items-center relative  h-fit"
+            className="flex justify-center items-center relative  h-fit "
           >
-            <div className="textHoverEffect flex justify-center items-center gap-10">
+            <motion.div variants={textAnimation} initial="initial" whileInView="animate" custom={1.1} viewport={{ once: true }} className="textHoverEffect flex justify-center items-center gap-10 ">
               <h1 className="">Men Products</h1>
               <ArrowRight />
-            </div>
+            </motion.div>
           </Link>
           <Link
             href={"/collections/all-products/women"}
             className="flex justify-center items-center h-fit relative "
           >
-            <div className="textHoverEffect flex justify-center items-center gap-10">
+            <motion.div variants={textAnimation} initial="initial" whileInView="animate" custom={1.1} viewport={{ once: true }} className="textHoverEffect flex justify-center items-center gap-10">
               <h1>Women Products</h1>
               <ArrowRight />
-            </div>
+            </motion.div>
           </Link>
         </div>
       </div>

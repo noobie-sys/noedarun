@@ -25,26 +25,22 @@ export function ShoppingCartModal() {
     decrementItem,
   } = useShoppingCart();
 
-  const handleCheckoutCart = async (event : any) => {
+  const handleCheckoutCart = async (event: any) => {
     event.preventDefault();
+
     // clearCart()
     // clearCart()
     try {
       const result = await redirectToCheckout();
-      if(result){
-        clearCart()
-      }
-
+      // clearCart()
       if (result?.error) {
         console.log("results");
-      }else {
-        clearCart();
       }
-    //   clearCart();
+      //   clearCart();
     } catch (error) {
       console.log(error);
     }
-    // clearCart()
+    clearCart();
   };
   return (
     <div className="relative z-[3004645645656] ">
@@ -127,7 +123,9 @@ export function ShoppingCartModal() {
               </p>
               <div className="mt-6">
                 <Button
-                  onClick={handleCheckoutCart}
+                  onClick={(event) => {
+                    handleCheckoutCart(event);
+                  }}
                   disabled={cartCount === 0}
                   className={`w-full `}
                 >
