@@ -9,6 +9,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import AdditionalDetails from "@/components/AddditonalDetails";
 import CartProvider from "@/components/Provider/cartProvider";
 import { ShoppingCartModal } from "@/components/shoppingCartModal";
+import CustomCursor from "@/components/customCursor";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   useLayoutEffect(() => {
@@ -30,6 +31,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <RecoilRoot>
       <CartProvider>
         <ShoppingCartModal />
+        <CustomCursor />
         <Navbar />
 
         {children}

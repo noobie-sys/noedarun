@@ -10,6 +10,9 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Scrollbar } from "swiper/modules";
 import Image from "next/image";
 import { urlFor } from "@/app/lib/sanity";
+import { useLayoutEffect, useRef } from "react";
+import gsap from 'gsap'
+import { cursorLeave, cursorMove } from "@/Animations/gsap";
 
 interface Props {
   imageGallery: Array<string>;
@@ -17,6 +20,23 @@ interface Props {
 
 export default function SliderGallery({ imageGallery }: Props) {
   // console.log(imageGallery);
+
+  const parentRef = useRef<HTMLDivElement>(null);
+  const cursorRef = useRef<HTMLDivElement>(null);
+  useLayoutEffect(() => {
+    // const top = parentRef.current?.getBoundingClientRect().top;
+    const cursor = document.querySelector<HTMLDivElement>("#cursor");
+    if (parentRef.current) {
+      parentRef.current.addEventListener("mousemove", (e : MouseEvent) => {cursorMove({cursor , x : e.pageX , y : e.pageY})});
+      parentRef.current.addEventListener("mouseleave", (e : MouseEvent) => {cursorLeave(cursor)});
+    }
+    () => {
+     if(parentRef.current) {
+      parentRef.current.removeEventListener("mousemove", (e : MouseEvent) => {cursorMove({cursor , x : e.pageX , y : e.pageY})});
+      parentRef.current.removeEventListener("mouseleave", (e : MouseEvent) => {cursorLeave(cursor)});
+     }
+    }
+  }, []);
 
 
 
@@ -27,7 +47,7 @@ export default function SliderGallery({ imageGallery }: Props) {
         <h1 className="text-white absolute top-16 lg:top-10 left-1 lg:left-20">Gallery</h1>
       {/* </div> */}
 
-      <div className="w-full h-full lg:p-20 flex justify-center items-center ">
+      <div ref={parentRef} className="w-full h-full lg:p-20 flex justify-center items-center ">
         <Swiper
           slidesPerView={2}
           spaceBetween={20}

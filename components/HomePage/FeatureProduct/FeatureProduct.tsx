@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -10,10 +10,39 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { textAnimation } from "@/Animations/textAnimation";
 import { imageAnimation } from "@/Animations/imageAnimation";
+import CustomCursor from "@/components/customCursor";
+import gsap from "gsap";
+import { cursorLeave, cursorMove } from "@/Animations/gsap";
 
 const FeatureProduct = ({ data }: any) => {
+  const parentRef = useRef<HTMLDivElement>(null);
+  const cursorRef = useRef<HTMLDivElement>(null);
+  useLayoutEffect(() => {
+    // const top = parentRef.current?.getBoundingClientRect().top;
+    const cursor = document.querySelector<HTMLDivElement>("#cursor");
+    if (parentRef.current) {
+      parentRef.current.addEventListener("mousemove", (e: MouseEvent) => {
+        cursorMove({ cursor, x: e.pageX, y: e.pageY });
+      });
+      parentRef.current.addEventListener("mouseleave", (e: MouseEvent) => {
+        cursorLeave(cursor);
+      });
+    }
+    () => {
+      if (parentRef.current) {
+        parentRef.current.removeEventListener("mousemove", (e: MouseEvent) => {
+          cursorMove({ cursor, x: e.pageX, y: e.pageY });
+        });
+        parentRef.current.removeEventListener("mouseleave", (e: MouseEvent) => {
+          cursorLeave(cursor);
+        });
+      }
+    };
+  }, []);
   return (
-    <div className="w-full h-full relative px-3">
+    <div className="w-full h-full relative px-3 realtive">
+      {/* <CustomCursor /> */}
+      {/* <div ref={cursorRef} className="bg-blend-difference absolute -top-0 -left-0 w-10 -translate-x-1/2 -translate-y-1/2 h-10 opacity-0 bg-black rounded-full z-[454545]"></div> */}
       <div className="w-full h-full relative">
         <div className="text-div pt-6 tracking-tighter leading-[46px] lg:leading-none font-[400]">
           <motion.h1
@@ -35,14 +64,14 @@ const FeatureProduct = ({ data }: any) => {
           custom={1.1}
           className="card mt-10"
         >
-          <div className="image w-full  ">
+          <div className="image w-full  " ref={parentRef}>
             <div className="image-slider flex lg:px-12 px-0">
               <Swiper
                 slidesPerView={2}
                 spaceBetween={20}
                 effect={"coverflow"}
                 grabCursor={true}
-                loop={true}
+                loop={false}
                 pagination={{
                   clickable: true,
                 }}
@@ -108,7 +137,14 @@ const FeatureProduct = ({ data }: any) => {
             href={"/collections/all-products/men"}
             className="flex justify-center items-center relative  h-fit "
           >
-            <motion.div variants={textAnimation} initial="initial" whileInView="animate" custom={1.1} viewport={{ once: true }} className="textHoverEffect flex justify-center items-center gap-10 ">
+            <motion.div
+              variants={textAnimation}
+              initial="initial"
+              whileInView="animate"
+              custom={1.1}
+              viewport={{ once: true }}
+              className="textHoverEffect flex justify-center items-center gap-10 "
+            >
               <h1 className="">Men Products</h1>
               <ArrowRight />
             </motion.div>
@@ -117,7 +153,14 @@ const FeatureProduct = ({ data }: any) => {
             href={"/collections/all-products/women"}
             className="flex justify-center items-center h-fit relative "
           >
-            <motion.div variants={textAnimation} initial="initial" whileInView="animate" custom={1.1} viewport={{ once: true }} className="textHoverEffect flex justify-center items-center gap-10">
+            <motion.div
+              variants={textAnimation}
+              initial="initial"
+              whileInView="animate"
+              custom={1.1}
+              viewport={{ once: true }}
+              className="textHoverEffect flex justify-center items-center gap-10"
+            >
               <h1>Women Products</h1>
               <ArrowRight />
             </motion.div>
