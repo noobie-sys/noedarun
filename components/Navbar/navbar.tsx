@@ -16,7 +16,7 @@ import { useShoppingCart } from "use-shopping-cart";
 
 export const Navbar = () => {
   const [open, setOpen] = useRecoilState(navbarModalState);
-  const {handleCartClick} = useShoppingCart()
+  const {handleCartClick,cartCount} = useShoppingCart()
 
   // const data : NavbarCategory[]  = await getProductImage()
 
@@ -48,7 +48,7 @@ export const Navbar = () => {
         {/* <div className="w-full h-screen opacity-50 bg-black"></div> */}
         <NavbarDestop />
       </div>
-      <div className="right-side relative   flex gap-5 items-center ">
+      <div className="right-side relative z-[10]  flex gap-5 items-center ">
         <ThemeSwitch />
         <div className="flex gap-2" onClick={() => handleCartClick()}>
           <div className="cart-icon">
@@ -70,7 +70,7 @@ export const Navbar = () => {
             </svg>
           </div>
           <div className={`w-5 h-5 rounded-full bg-black dark:bg-white dark:text-black text-white text-[10px] text-center flex justify-center items-center `}>
-            1
+            {cartCount}
           </div>
         </div>
         <div
