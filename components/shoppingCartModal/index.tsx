@@ -23,7 +23,6 @@ export function ShoppingCartModal() {
     clearCart,
     incrementItem,
     decrementItem,
-
   } = useShoppingCart();
 
   const handleCheckoutCart = async (event: any) => {
@@ -56,13 +55,17 @@ export function ShoppingCartModal() {
                     {Object.values(cartDetails ?? {}).map((item) => (
                       <li key={item.id} className="flex py-6   ">
                         <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200 dark:border-gray-600">
-                          <Image
-                            src={item.image as string}
-                            alt={item.name}
-                            width={100}
-                            height={100}
-                            className="bg-white"
-                          />
+                          {!item.image ? (
+                            "loading... "
+                          ) : (
+                            <Image
+                              src={item.image as string}
+                              alt={item.name}
+                              width={100}
+                              height={100}
+                              className="bg-white"
+                            />
+                          )}
                         </div>
                         <div className="ml-4 flex flex-1 flex-col ">
                           <div>
@@ -80,12 +83,12 @@ export function ShoppingCartModal() {
                                 Qty: {item.quantity}
                               </p>
                               <div className="flex gap-2 ">
-                                <span onClick={() => incrementItem(item.id)} >
-                                    <PlusCircle className="w-5 h-5 cursor-pointer" />
+                                <span onClick={() => incrementItem(item.id)}>
+                                  <PlusCircle className="w-5 h-5 cursor-pointer" />
                                 </span>
                                 <span>1</span>
                                 <span onClick={() => decrementItem(item.id)}>
-                                    <MinusCircle className="w-5 h-5 cursor-pointer" />
+                                  <MinusCircle className="w-5 h-5 cursor-pointer" />
                                 </span>
                               </div>
                             </div>
@@ -115,7 +118,13 @@ export function ShoppingCartModal() {
                 Shipping and taxes are calculated at checkout
               </p>
               <div className="mt-6">
-                <Button onClick={handleCheckoutCart} disabled={cartCount === 0} className={`w-full ${cartCount === 0 && 'cursor-not-allowed'}`}>
+                <Button
+                  onClick={handleCheckoutCart}
+                  disabled={cartCount === 0}
+                  className={`w-full ${
+                    cartCount === 0 && "cursor-not-allowed"
+                  }`}
+                >
                   Checkout
                 </Button>
               </div>
