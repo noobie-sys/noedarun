@@ -50,10 +50,11 @@ const SingleProduct = async ({ params }: Props) => {
             <div className="w-full " key={el._id}>
               <HeroPageSingleProduct
                 key={el._id}
-                bannerImage={urlFor(el.bannerImage).url()}
-                name={el.name}
-                model={el.model}
-                price={el.price}
+                // bannerImage={urlFor(el.bannerImage).url()}
+                // name={el.name}
+                // model={el.model}
+                // price={el.price}
+                {...el}
               />
 
               <ProductDetails

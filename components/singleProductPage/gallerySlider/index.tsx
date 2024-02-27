@@ -24,7 +24,7 @@ export default function SliderGallery({ imageGallery }: Props) {
 
   return (
     <div className="w-full lg:h-screen h-[60vh]  bg-black relative">
-        <h1 className="text-white absolute top-20 lg:top-10 left-1 lg:left-20">Gallery</h1>
+        <h1 className="text-white absolute top-16 lg:top-10 left-1 lg:left-20">Gallery</h1>
       {/* </div> */}
 
       <div className="w-full h-full lg:p-20 flex justify-center items-center ">

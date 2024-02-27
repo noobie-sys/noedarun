@@ -7,6 +7,8 @@ import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import AdditionalDetails from "@/components/AddditonalDetails";
+import CartProvider from "@/components/Provider/cartProvider";
+import { ShoppingCartModal } from "@/components/shoppingCartModal";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
@@ -26,11 +28,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   }, []);
   return (
     <RecoilRoot>
-      <Navbar />
+      <CartProvider>
+        <ShoppingCartModal />
+        <Navbar />
 
-      {children}
-      <AdditionalDetails />
-      <Footer />
+        {children}
+        <AdditionalDetails />
+        <Footer />
+      </CartProvider>
     </RecoilRoot>
   );
 };

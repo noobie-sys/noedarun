@@ -10,10 +10,13 @@ import { navbarModalState } from "@/context/navbarModalState";
 import "./nav.css";
 import NavbarDestop from "./DesktopNavbar";
 import { useParams, usePathname } from "next/navigation";
+// import {handleCartClick} from useShoppingCart()
+import { useShoppingCart } from "use-shopping-cart";
 
 
 export const Navbar = () => {
   const [open, setOpen] = useRecoilState(navbarModalState);
+  const {handleCartClick} = useShoppingCart()
 
   // const data : NavbarCategory[]  = await getProductImage()
 
@@ -45,9 +48,9 @@ export const Navbar = () => {
         {/* <div className="w-full h-screen opacity-50 bg-black"></div> */}
         <NavbarDestop />
       </div>
-      <div className="right-side relative z-[52]  flex gap-5 items-center ">
+      <div className="right-side relative   flex gap-5 items-center ">
         <ThemeSwitch />
-        <div className="flex gap-2">
+        <div className="flex gap-2" onClick={() => handleCartClick()}>
           <div className="cart-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
