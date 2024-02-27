@@ -1,7 +1,7 @@
 "use client";
 import { Footer } from "@/components/Footer/Footer";
 import { Navbar } from "@/components/Navbar/navbar";
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import { RecoilRoot } from "recoil";
 import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
@@ -11,7 +11,7 @@ import CartProvider from "@/components/Provider/cartProvider";
 import { ShoppingCartModal } from "@/components/shoppingCartModal";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const lenis = new Lenis({
       duration: 1.2,
