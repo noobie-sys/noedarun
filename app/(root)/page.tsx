@@ -26,13 +26,13 @@ export default async function Home() {
   // console.log(data)
   // console.log(data)
   return (
-    <Fader>
+    // <Fader>
       <section className="flex flex-col min-h-screen  gap-4 w-full">
         <HomePage data={data.response} />
         <FeatureProduct data={data.response2} />
 
         <Stories data={data.response} />
       </section>
-    </Fader>
+    // </Fader>
   );
 }
