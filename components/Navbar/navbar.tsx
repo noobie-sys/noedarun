@@ -80,7 +80,7 @@ export const Navbar = () => {
         </div>
         <div
           onClick={navModalState}
-          className="burger-menu relative  lg:hidden cursor-pointer"
+          className={`burger-menu relative  lg:hidden cursor-pointer ${pathname === "/products/"+params.slug ? "text-white" : "text-color"}`}
         >
           <Menu />
         </div>

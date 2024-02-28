@@ -132,7 +132,7 @@ const FeatureProduct = ({ data }: any) => {
             </div>
           </div>
         </motion.div>
-        <div className="links flex justify-end absolute z-[50] lg:top-16 lg:right-0 lg:w-full lg:h-fit -bottom-12 left-0  gap-10 lg:px-12 text-[20px]  ">
+        <div className="links flex justify-end absolute z-[45] lg:top-16 lg:right-0 lg:w-full lg:h-fit -bottom-12 left-0  gap-10 lg:px-12 text-[20px]  ">
           <Link
             href={"/collections/all-products/men"}
             className="flex justify-center items-center relative  h-fit "

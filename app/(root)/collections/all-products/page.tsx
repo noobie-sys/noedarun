@@ -27,7 +27,7 @@ const AllProducts = async () => {
             <h1 className="text-[5vw] font-bold ">Products</h1>
         </div>
 
-        <div className="gap-4 flex  flex-wrap  justify-center  lg:gap-4 mb-10 ">
+        <div className="gap-4 flex  flex-wrap items-center  justify-center  lg:gap-4 mb-10 ">
 
         {
             data && data.map((el , i ) => (

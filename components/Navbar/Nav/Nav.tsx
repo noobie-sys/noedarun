@@ -29,7 +29,7 @@ const MobileNav = () => {
   
   return (
     <SideBarModal>
-      <div className="items flex flex-col gap-5 text-5xl pt-[108px] w-full h-full dark:text-black tracking-tighter">
+      <div className="items flex flex-col gap-5 text-5xl pt-[108px]  w-full h-full dark:text-black tracking-tighter">
         {navLinks.map((links, idx) => (
           <Link href={links.link}
             className="flex flex-col overflow-hidden  pl-4  cursor-pointer"
