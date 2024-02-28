@@ -24,9 +24,9 @@ const Nav = ({ gender, data }: Props) => {
   // console.log(data);
   // const pathname = usePathname()
   return (
-    <div className={`relative z-50 submenu-item hidden lg:flex justify-around px-5 h-full w-full items-center transition-all pt-10 ${pathname === '/products/'+params.slug ? "bg-black text-white" : ""} `}>
+    <div className={`relative z-50 submenu-item hidden lg:flex justify-around px-5 h-full w-full items-center transition-all pt-5 ${pathname === '/products/'+params.slug ? "bg-black text-white" : ""} `}>
      {/* <div className='absolute overlay  left-0 w-screen top-0 opacity-90 z-5 h-screen bg-[#f1f1f1] dark:bg-black' /> */}
-     <div className={`submenu-item hidden lg:flex  justify-around px-5 h-full w-full items-center transition-all pt-10 ${pathname === '/products/'+params.slug ? "bg-black text-white" : ""}`}>
+     <div className={`submenu-item hidden lg:flex  justify-around px-5 h-full w-full items-center transition-all pt-8 ${pathname === '/products/'+params.slug ? "bg-black text-white" : ""}`}>
 
      
       {data &&
