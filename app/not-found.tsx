@@ -1,12 +1,7 @@
 'use client'
 import React from 'react'
-// import {Lottie} from 'react-lottie'
-// import lottie from 'lottie-web'
-// import animationData from '@/Animations/lottiAnim/_404.json'
 import { Player } from '@lottiefiles/react-lottie-player';
 import Link from 'next/link';
-
-// import Lottie from 'react-lottie'
 const NotFound = () => {
  
 

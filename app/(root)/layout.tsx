@@ -1,7 +1,7 @@
 "use client";
 import { Footer } from "@/components/Footer/Footer";
 import { Navbar } from "@/components/Navbar/navbar";
-import React, { useEffect, useLayoutEffect } from "react";
+import React, {  useLayoutEffect } from "react";
 import { RecoilRoot } from "recoil";
 import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";

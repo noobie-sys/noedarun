@@ -1,5 +1,7 @@
 'use client' 
  
+import { Button } from '@/components/ui/button'
+import { Player } from '@lottiefiles/react-lottie-player'
 import { useEffect } from 'react'
  
 export default function Error({
@@ -15,16 +17,22 @@ export default function Error({
   }, [error])
  
   return (
-    <div>
+    <div className='w-full h-screen flex justify-center items-center'>
       <h2>Something went wrong!</h2>
-      <button
+      <Player
+        src='https://lottie.host/85705511-0aea-4843-87d0-78aa04a45f31/vt3CWbidta.json'
+        className="player w-full h-full"
+        loop
+        autoplay
+      />
+      <Button
         onClick={
           // Attempt to recover by trying to re-render the segment
           () => reset()
         }
       >
         Try again
-      </button>
+      </Button>
     </div>
   )
 }

@@ -1,9 +1,8 @@
 import Image from "next/image";
-import { client, urlFor } from "../lib/sanity";
+import { client} from "../lib/sanity";
 import HomePage from "@/components/HomePage";
 import FeatureProduct from "@/components/HomePage/FeatureProduct/FeatureProduct";
 import Stories from "@/components/Stories/Stories";
-import AdditionalDetails from "@/components/AddditonalDetails";
 
 const getBannerImage = async () => {
   const query = `*[_type == "banner"]`;
