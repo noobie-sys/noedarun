@@ -1,5 +1,6 @@
 import { client, urlFor } from "@/app/lib/sanity";
 import FeatureProduct from "@/components/HomePage/FeatureProduct/FeatureProduct";
+import Empty from "@/components/lottie/empty";
 import ProductDetails from "@/components/singleProductPage/ProductDetailsPage/page";
 import SliderGallery from "@/components/singleProductPage/gallerySlider";
 import HeroPageSingleProduct from "@/components/singleProductPage/heroSection";
@@ -39,10 +40,8 @@ const SingleProduct = async ({ params }: Props) => {
   return (
     <div className="min-h-screen w-full flex flex-col">
       {data.length === 0 ? (
-        <div className="w-full h-[80vh] flex justify-center items-center text-5xl underline">
-          <h1 className="w-[50%] text-center">
-            I'm sorry, It's seems like we don't have what you need!
-          </h1>
+        <div className="w-full h-screen flex justify-center items-center text-5xl underline">
+          <Empty />
         </div>
       ) : (
         data.map((el, i) => {
