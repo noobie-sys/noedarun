@@ -1,12 +1,13 @@
 'use client'
 import React from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
+import dataAnimation from '@/Animations/lottiAnim/empty.json'
 
 const Empty = () => {
   return (
     <div className="w-full h-full justify-center flex-col items-center">
       <Player
-        src="https://lottie.host/4ff56db5-2385-4156-85f9-ad60c8c27ca6/fR4XKibL1x.json"
+        src={dataAnimation}
         className="player w-full h-full"
         loop
         autoplay

@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button'
 import { Player } from '@lottiefiles/react-lottie-player'
 import { useEffect } from 'react'
+// import dataAnimation from '@/Animations/lottiAnim/failed.json'
  
 export default function Error({
   error,
@@ -19,12 +20,12 @@ export default function Error({
   return (
     <div className='w-full h-screen flex justify-center items-center'>
       <h2>Something went wrong!</h2>
-      <Player
-        src='https://lottie.host/85705511-0aea-4843-87d0-78aa04a45f31/vt3CWbidta.json'
+      {/* <Player
+        src={dataAnimation}
         className="player w-full h-full"
         loop
         autoplay
-      />
+      /> */}
       <Button
         onClick={
           // Attempt to recover by trying to re-render the segment

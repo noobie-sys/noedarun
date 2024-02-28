@@ -6,6 +6,7 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
     <USCProvider
       mode="payment"
       currency="USD"
+      allowedCountries={['US', 'GB', 'CA' , "IN" ]}
       cartMode="client-only"
       stripe={process.env.NEXT_PUBLIC_STRIPE_KEY as string}
       successUrl="http://localhost:3000/stripe/success"
