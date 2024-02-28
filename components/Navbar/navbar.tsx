@@ -1,6 +1,6 @@
 
+
 'use client'
-import { ThemeSwitch } from "@/components/theme-switch";
 import Link from "next/link";
 import MobileNav from "./Nav/Nav";
 import { ArrowRight, Menu } from "lucide-react";
@@ -54,7 +54,7 @@ export const Navbar = () => {
         <NavbarDestop />
       </div>
       <motion.div variants={navBarTextAnimation} initial="initial" animate="animate" className="right-side relative z-[10]  flex gap-5 items-center ">
-        <ThemeSwitch />
+        {/* <ThemeSwitch /> */}
         <div className="flex gap-2" onClick={() => handleCartClick()}>
           <div className="cart-icon">
             <svg
