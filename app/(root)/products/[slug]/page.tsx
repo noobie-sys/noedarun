@@ -58,7 +58,6 @@ const SingleProduct = async ({ params }: Props) => {
                 descriptions={el.description}
               />
               <SliderGallery  imageGallery={el.galleryImages}/>
-              {/* <FeatureProduct /> */}
             </div>
           );
         })

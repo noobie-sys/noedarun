@@ -15,10 +15,10 @@ import gsap from 'gsap'
 import { cursorLeave, cursorMove } from "@/Animations/gsap";
 
 interface Props {
-  imageGallery: any;
+  imageGallery: Array<string>;
 }
 
-export default function SliderGallery({ imageGallery }: Props) {
+const  SliderGallery =({ imageGallery }: Props) => {
   // console.log(imageGallery);
 
   const parentRef = useRef<HTMLDivElement>(null);
@@ -40,7 +40,7 @@ export default function SliderGallery({ imageGallery }: Props) {
 
 
 
-  if(!imageGallery) return;
+  if(imageGallery.length === 0) return null
 
   return (
     <div className="w-full lg:h-screen h-[60vh]  bg-black relative">
@@ -72,7 +72,7 @@ export default function SliderGallery({ imageGallery }: Props) {
             },
           }}
         >
-          {imageGallery && imageGallery.map((image : any, i : number) => (
+          {imageGallery && imageGallery.map((image , i ) => (
             <SwiperSlide key={i} className="lg:w-full lg:h-full w-[50vw] h-[40vw] ">
               <div className="w-full h-full overflow-hidden">
                 <Image
@@ -92,3 +92,5 @@ export default function SliderGallery({ imageGallery }: Props) {
     </div>
   );
 }
+
+export default SliderGallery
