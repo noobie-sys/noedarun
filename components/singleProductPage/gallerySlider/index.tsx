@@ -15,7 +15,7 @@ import gsap from 'gsap'
 import { cursorLeave, cursorMove } from "@/Animations/gsap";
 
 interface Props {
-  imageGallery: Array<string>;
+  imageGallery: any;
 }
 
 export default function SliderGallery({ imageGallery }: Props) {
@@ -72,7 +72,7 @@ export default function SliderGallery({ imageGallery }: Props) {
             },
           }}
         >
-          {imageGallery && imageGallery.map((image, i) => (
+          {imageGallery && imageGallery.map((image : any, i : number) => (
             <SwiperSlide key={i} className="lg:w-full lg:h-full w-[50vw] h-[40vw] ">
               <div className="w-full h-full overflow-hidden">
                 <Image
