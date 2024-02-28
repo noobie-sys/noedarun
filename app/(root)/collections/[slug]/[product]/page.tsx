@@ -35,7 +35,7 @@ const Product = async ({params} : {params : {slug : string , product : string}})
         {
             data.length === 0 ? (
                 <div className='w-full h-[80vh] flex justify-center items-center text-5xl underline'>
-                    <h1 className='w-[50%] text-center'>I'm sorry, It's seems like we don't have what you need!</h1>
+                    <h1 className='w-[50%] text-center'>I'm sorry, It&apos;s seems like we don't have what you need!</h1>
                 </div>
             ) : data.map((el , i) => (
                 <Card key={i} image={urlFor(el.image).url()} name={el.name} price={el.price} model={el.model} slug={el.slug} index={i} />
