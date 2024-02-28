@@ -35,7 +35,7 @@ const HomePage = ({ data }: any) => {
           <motion.h1 variants={textAnimation} initial="initial" animate="animate" custom={1} className=" leading-none ">INSPIRED BY </motion.h1>
         </div>
         <div className="w-full overflow-hidden">
-          <motion.h1 variants={textAnimation} initial="initial" animate="animate" custom={1.1} className="">CANADA'S TOUGHEST</motion.h1>
+          <motion.h1 variants={textAnimation} initial="initial" animate="animate" custom={1.1} className="">CANADA&apos;S TOUGHEST</motion.h1>
         </div>
         <div className="w-full overflow-hidden">
           <motion.h1 variants={textAnimation} initial="initial" animate="animate" custom={1.3} className="">CONDITIONS. </motion.h1>

@@ -9,7 +9,7 @@ import { textAnimation, textAnimationLoop } from "@/Animations/textAnimation";
 
 const Stories = ({ data }: any) => {
   const details =
-    "We couldn't find a trail shoe that was tough enough, light enough or fast enough to take us where we wanted to go. So we created it.".split(
+    "We couldn&apos;t find a trail shoe that was tough enough, light enough or fast enough to take us where we wanted to go. So we created it.".split(
       " "
     );
   return (
